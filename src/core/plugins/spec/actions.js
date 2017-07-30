@@ -206,16 +206,8 @@ export const executeRequest = (req) => ({fn, specActions, specSelectors}) => {
   parsedRequest = fn.buildRequest(parsedRequest)
 
   specActions.setRequest(req.pathName, req.method, parsedRequest)
-
-  // track duration of request
-  const startTime = Date.now()
-
-  return fn.execute(req)
-  .then( res => {
-    res.duration = Date.now() - startTime
-    specActions.setResponse(req.pathName, req.method, res)
-  } )
-  .catch( err => specActions.setResponse(req.pathName, req.method, { error: true, err: serializeError(err) } ) )
+  // Hack because we don't actually want it to execute!
+  specActions.setResponse(req.pathName, req.method, {foo: 'bar'})
 }
 
 

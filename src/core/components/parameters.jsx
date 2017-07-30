@@ -65,7 +65,6 @@ export default class Parameters extends Component {
     } = this.props
 
     const ParameterRow = getComponent("parameterRow")
-    const TryItOutButton = getComponent("TryItOutButton")
 
     const isExecute = tryItOutEnabled && allowTryItOut
 
@@ -73,9 +72,6 @@ export default class Parameters extends Component {
       <div className="opblock-section">
         <div className="opblock-section-header">
           <h4 className="opblock-title">Parameters</h4>
-            { allowTryItOut ? (
-              <TryItOutButton enabled={ tryItOutEnabled } onCancelClick={ onCancelClick } onTryoutClick={ onTryoutClick } />
-            ) : null }
         </div>
         { !parameters.count() ? <div className="opblock-description-wrapper"><p>No parameters</p></div> :
           <div className="table-container">

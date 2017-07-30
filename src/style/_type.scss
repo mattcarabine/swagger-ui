@@ -1,21 +1,21 @@
 @mixin text_body($color: #3b4151)
 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Kievit OT", sans-serif;
 
-    color: $color;
+    color: $color !important;
 }
 
 @mixin text_code($color: #3b4151)
 {
-    font-family: 'Source Code Pro', monospace;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
     font-weight: 600;
 
-    color: $color;
+    color: $color !important;
 }
 
 @mixin text_headline($color: #3b4151)
 {
-    font-family: 'Titillium Web', sans-serif;
-
-    color: $color;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-shadow: 0 0px #fff !important;
+    color: $color !important;
 }

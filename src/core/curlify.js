@@ -6,6 +6,7 @@ export default function curl( request ){
   let headers = request.get("headers")
   curlified.push( "curl" )
   curlified.push( "-X", request.get("method") )
+  curlified.push( "-u Administrator:password")
   curlified.push( `"${request.get("url")}"`)
 
   if ( headers && headers.size ) {

@@ -339,6 +339,10 @@ body
     }
 }
 
+.col
+{
+  display: table-cell !important;
+}
 
 .tab
 {
@@ -357,7 +361,7 @@ body
         min-width: 90px;
         padding: 0;
 
-        cursor: pointer;
+        cursor: pointer !important;
 
         @include text_headline();
 
